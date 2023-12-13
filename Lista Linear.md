@@ -6,7 +6,7 @@ Estrutura de dados na qual cada elemento é precedido por um elemento e sucedido
 
 Os elementos estão em uma dada ordem (por exemplo, a ordem de inclusão ou ordenados por uma chave).
 
-# Lista Linear Sequecial
+## Lista Linear Sequecial
 
 é uma lista linear na qual a ordem lógica dos elementos (a ordem "Vista" pelo usuario) é a mesma ordem física (em memória principal) dos elementos.
 isto é, elementos vizinhos na lista estarão em posições vizinhas de memória.
@@ -153,5 +153,15 @@ bool excluirElemLista(LISTA* l, TIPOCHAVE ch) {
     for (j = pos; j < l->nroElem-1; j++) l->A[j] = l->A[j+1];
     l->nroElem--;
     return true;
+}
+```
+
+## Reinicialização da estrutura
+
+Para esta estrutura, para reinicializar a lista basta colocar 0 (zero) no campo _nrmElem_
+
+```c
+void reinicializarEstrutura(LISTA* l) {
+    l->nrmElem = 0;
 }
 ```
